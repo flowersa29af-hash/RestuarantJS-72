@@ -24,12 +24,15 @@ function calculateTotal(dishPrice, taxs){
     return totalPrice;
 }
 
-let x = calculateTotal(10, 0.105)
+let x = calculateTotal(12, 0.105)
+let y = calculateTotal(14,0.105)
+let z = calculateTotal(15, 0.105)
 
 //console.log("Garden total with tax is " + x);
-//console.log("Spring Salad total with tax is " + x);
-//console.log("Fruit Salad total with tax is " + x);
-console.log("Tossed salad total with tax is " + x);
+console.log("Spring Salad total with tax is " + z);
+console.log("Fruit Salad total with tax is " + y);
+console.log("Garden salad total with tax is " + x);
+
 
 
 

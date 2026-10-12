@@ -78,7 +78,7 @@ function checkAge(age){
     if(age >= 18){
         return "can order drinks"; 
     }else{
-        return "cannot drink"
+        return "cannot drink";
     }
 }
 
