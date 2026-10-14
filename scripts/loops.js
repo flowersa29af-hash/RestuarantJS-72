@@ -42,7 +42,7 @@ console.log(temperatures[2]);
 
 //loop to travel the array
 
-for( let i=0; i=5; i++){
+for (let i = 0; i < temperatures.length; i++) {
     console.log(temperatures[i]);
 }
 
@@ -52,5 +52,25 @@ for( let i=0; i=5; i++){
 const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const sales = [320, 410, 290, 505, 480, 620, 710];
 
-for( let i=0; i<7; i++)
-    console.log(`$(day)[i]`);
+function getDayLabel(salesAmount) {
+    return salesAmount >= 500 ? "High" : "Low";
+}
+
+function generateReport() {
+    let output = "";
+    let total = 0;
+
+    for (let i = 0; i < days.length; i++) {
+        const salesAmount = sales[i];
+        const label = getDayLabel(salesAmount);
+        total += salesAmount;
+        output += `${days[i]}: $${salesAmount} (${label})\n`;
+    }
+
+    const average = total / days.length;
+    output += `Weekly total: $${total}\n`;
+    output += `Weekly average: $${average.toFixed(2)}`;
+    return output;
+}
+
+console.log(generateReport());

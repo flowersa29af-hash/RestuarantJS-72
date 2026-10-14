@@ -23,7 +23,7 @@ let message3 = checkDelivery(35)
         }else if(hour >=12 && hour <=16){
             return (`hour ${hour} lunch menu`)   
         }else if(hour >=17 && hour <=22){
-            return(`hour ${hour} dinner menu `)
+            return(`hour ${hour} dinner menu`)
         }else{
             return `We are closed`;
         }
